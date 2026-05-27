@@ -1,0 +1,7 @@
+
+<sly data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"></sly>
+
+<div class="images" data-sly-test="${image.src}">
+    <img src="${image.src @ context='uri'}" alt="${image.alt @ context='attribute'}">
+    <img src="${image.src @ context='uri'}" alt="${image.alt @ context='attribute'}">
+</div>

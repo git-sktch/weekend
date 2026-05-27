@@ -1,0 +1,29 @@
+<sly data-sly-use.hello="/libs/granite/sightly/templates/clientlib.html"/>
+
+<sly data-sly-call="${hello.all @ categories='weekend.cards'}"/>
+
+<div class="card" data-card>
+
+    <div data-sly-test="${properties.image}" class="card__media">
+        <img class="card__image"
+             src="${properties.image @ context='uri'}"
+             alt="${properties.cardTitle @ context='attribute'}"/>
+    </div>
+
+    <div class="card__content">
+        <h2 class="title card__title">
+            ${properties.cardTitle}
+        </h2>
+
+        <div class="description card__description">
+            ${properties.text}
+        </div>
+
+        <a data-sly-test="${properties.buttonLabel && properties.buttonLink}"
+           class="card__button"
+           href="${properties.buttonLink @ context='uri'}">
+            ${properties.buttonLabel}
+        </a>
+    </div>
+
+</div>

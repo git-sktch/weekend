@@ -1,0 +1,9 @@
+<sly data-sly-use.model="com.weekend.core.models.SlingComponent"/>
+
+<div data-sly-list.item="${model.items}">
+
+    <h2>${item.title}</h2>
+
+    <img src="${item.image}" alt="${item.title}"/>
+
+</div>
