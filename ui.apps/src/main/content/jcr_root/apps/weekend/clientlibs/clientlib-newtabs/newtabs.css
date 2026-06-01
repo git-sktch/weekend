@@ -1,0 +1,19 @@
+.tab-content {
+    display: none;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-btn {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.tab-btn.active {
+    background: #0073e6;
+    color: white;
+}
