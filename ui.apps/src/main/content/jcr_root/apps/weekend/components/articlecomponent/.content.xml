@@ -4,11 +4,7 @@
         xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
         xmlns:cq="http://www.day.com/jcr/cq/1.0"
         xmlns:jcr="http://www.jcp.org/jcr/1.0"
+
         jcr:primaryType="cq:Component"
-        jcr:title="images"
-<<<<<<< HEAD
-        sling:resourceSuperType="core/wcm/components/image/v2/image"
-=======
-        sling:resourceSuperType="core/wcm/components/image/v3/image"
->>>>>>> 2cbaaff26e9c4ccbcc61311d9c7cb4ea62c8639b
+        jcr:title="Article Component"
         componentGroup="Weekend Project - Content"/>

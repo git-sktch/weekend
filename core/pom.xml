@@ -44,6 +44,10 @@
                         <configuration>
                             <bnd><![CDATA[
 Import-Package: javax.annotation;version=0.0.0,*
+<<<<<<< HEAD
+=======
+Sling-Model-Packages: com.weekend.core.models
+>>>>>>> 2cbaaff26e9c4ccbcc61311d9c7cb4ea62c8639b
                                 ]]></bnd>
                         </configuration>
                     </execution>

@@ -11,3 +11,9 @@ $include "./default_filters.any"
 
 # Allow manifest.webmanifest files located in the content
 /0102 { /type "allow" /extension "webmanifest" /path "/content/*/manifest" }
+<<<<<<< HEAD
+=======
+
+# Allow first service demo servlet
+/0103 { /type "allow" /method "GET" /url "/bin/firstservice" }
+>>>>>>> 2cbaaff26e9c4ccbcc61311d9c7cb4ea62c8639b
