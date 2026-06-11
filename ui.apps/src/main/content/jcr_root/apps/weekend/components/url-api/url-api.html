@@ -1,0 +1,25 @@
+<div class="urlapi-container">
+
+    <input
+            type="hidden"
+            id="apiUrl"
+            value="${properties.apiUrl @ context='attribute'}"/>
+
+    <input
+            type="hidden"
+            id="limit"
+            value="${properties.limit}"/>
+
+    <button type="button" id="loadApiBtn">
+        Load Data
+    </button>
+
+    <h2 id="statusMsg">Waiting...</h2>
+
+    <div id="apiResult" class="urlapi-wrapper"></div>
+
+</div>
+
+<sly
+        data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+        data-sly-call="${clientlib.all @ categories='clientlibs.urlapi'}"/>
