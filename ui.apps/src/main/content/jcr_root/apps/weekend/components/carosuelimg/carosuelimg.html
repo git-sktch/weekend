@@ -1,0 +1,30 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-use.templates="core/wcm/components/commons/v1/templates.html"
+     data-sly-use.model="com.weekend.core.models.CarouselImgModel"
+     data-sly-call="${clientlib.css @ categories='weekend.carouselimg'}"></sly>
+
+<div class="carouselimg" data-sly-test.hasItems="${!model.empty}">
+    <div class="carouselimg__track">
+        <sly data-sly-list.item="${model.items}">
+            <article class="carouselimg__slide">
+                <img class="carouselimg__image"
+                     src="${item.image @ context='uri'}"
+                     alt="${item.text @ context='attribute'}">
+                <div class="carouselimg__content" data-sly-test="${item.text || item.textarea}">
+                    <h3 class="carouselimg__title" data-sly-test="${item.text}">${item.text}</h3>
+                    <p class="carouselimg__description" data-sly-test="${item.textarea}">${item.textarea}</p>
+                </div>
+            </article>
+        </sly>
+    </div>
+    <div class="carouselimg__controls" data-sly-test="${model.multipleItems}">
+        <button class="carouselimg__button carouselimg__button--prev" type="button" aria-label="Previous slide">&lt;</button>
+        <button class="carouselimg__button carouselimg__button--next" type="button" aria-label="Next slide">&gt;</button>
+    </div>
+</div>
+
+<sly data-sly-call="${templates.placeholder @ isEmpty=!hasItems}"></sly>
+<p class="carouselimg__empty" data-sly-test="${wcmmode.edit && !hasItems}">
+    Add at least one carousel item with an image.
+</p>
+<sly data-sly-call="${clientlib.js @ categories='weekend.carouselimg'}"></sly>

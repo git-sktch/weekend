@@ -1,0 +1,12 @@
+
+<<<<<<< HEAD
+<div class="images">
+    <img src="${properties.fileReference @ context='uri'}">
+=======
+<sly data-sly-use.image="com.adobe.cq.wcm.core.components.models.Image"></sly>
+
+<div class="images" data-sly-test="${image.src}">
+    <img src="${image.src @ context='uri'}" alt="${image.alt @ context='attribute'}">
+    <img src="${image.src @ context='uri'}" alt="${image.alt @ context='attribute'}">
+>>>>>>> 2cbaaff26e9c4ccbcc61311d9c7cb4ea62c8639b
+</div>

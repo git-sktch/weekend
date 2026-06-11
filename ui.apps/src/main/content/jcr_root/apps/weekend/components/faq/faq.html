@@ -1,0 +1,30 @@
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+<sly data-sly-use.model="com.weekend.core.models.FAQModel"/>
+
+<sly data-sly-call="${clientlib.css @ categories='weekend.faq'}"/>
+<sly data-sly-call="${clientlib.js @ categories='weekend.faq'}"/>
+
+<div class="faq-component">
+
+    <div class="faq-buttons">
+        <button type="button" class="expand-all">Expand All</button>
+        <button type="button" class="collapse-all">Collapse All</button>
+    </div>
+
+    <div data-sly-list.item="${model.faqList}">
+
+        <div class="faq-item">
+
+            <div class="faq-question">
+                ${item.question}
+            </div>
+
+            <div class="faq-answer">
+                ${item.answer}
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,17 @@
+<sly data-sly-use.model="com.weekend.core.models.NewApiSling"/>
+
+<div class="product-list">
+
+    <div data-sly-list.product="${model.products}">
+
+        <div class="card">
+
+            <h2>${product.name}</h2>
+
+            <p>Price : ₹${product.price}</p>
+
+        </div>
+
+    </div>
+
+</div>

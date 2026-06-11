@@ -1,0 +1,36 @@
+<sly data-sly-use.model="com.weekend.core.models.NewTabsModel"/>
+<sly data-sly-use.clientlib="/libs/granite/sightly/templates/clientlib.html"/>
+
+<sly data-sly-call="${clientlib.css @ categories='newtabs'}"/>
+
+<div class="tabs-component">
+
+    <div class="tab-buttons">
+
+        <sly data-sly-list.tab="${model.tabs}">
+            <button
+                    class="tab-btn ${tabList.first ? 'active' : ''}"
+                    data-tab="tab-${tabList.count}">
+                ${tab.title}
+            </button>
+        </sly>
+
+    </div>
+
+    <div class="tab-contents">
+
+        <sly data-sly-list.tab="${model.tabs}">
+            <div
+                    id="tab-${tabList.count}"
+                    class="tab-content ${tabList.first ? 'active' : ''}">
+
+                ${tab.description}
+
+            </div>
+        </sly>
+
+    </div>
+
+</div>
+
+<sly data-sly-call="${clientlib.js @ categories='newtabs'}"/>
